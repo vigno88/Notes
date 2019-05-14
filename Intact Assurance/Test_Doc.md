@@ -4,7 +4,6 @@
 
  - [Jenkins Url](https://stha38e56:444/view/Billing/)
 
-- The *schedule test* flow is used to shedule and rul all automated tests
   - Once in the flow, we can see a list of build
     - BUILD_ENDTOEND_GWBC-BDI = gobrio (old system that we want to replace by Guidewire)
     - BUILD_ENDTOEND_GWBC = Guidewire
@@ -18,29 +17,41 @@
 Always verify if the fail already happened in the past
 BDI in priority since other test depends of them later in the day
 
-- [x] [BUILD_ENDTOEND_GWBC-BDI_D1_FLOW [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/BUILD_ENDTOEND_GWBC-BDI_D1_FLOW/)
-- [x] [BUILD_ENDTOEND_GWBC-BDI_D2_FLOW [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/BUILD_ENDTOEND_GWBC-BDI_D2_FLOW/)
-- [x] [BUILD_ENDTOEND_GWBC-BDI_D3_FLOW [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/BUILD_ENDTOEND_GWBC-BDI_D3_FLOW/)
-- [x] [BUILD_ENDTOEND_GWBC-BDI_FLOW [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/BUILD_ENDTOEND_GWBC-BDI_FLOW/)
-- [x] Look at the ping in the most recent build in [TEST_Integration [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TEST_Integration/)
-> 12 fail in TestNonPROD
+- [ ] [BUILD_ENDTOEND_GWBC-BDI_D1_FLOW [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/BUILD_ENDTOEND_GWBC-BDI_D1_FLOW/)
+  > 2 fails
+  > - 178-EndToEndBelairQCRes1NewBusiness_BDI_D1 **Pass**
+  > - 178-EndToEndBelairONRes1NewBusiness_BDI_D1 **Pass**
+- [X] ~~*[BUILD_ENDTOEND_GWBC-BDI_D2_FLOW [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/BUILD_ENDTOEND_GWBC-BDI_D2_FLOW/)*~~ [2019-05-14]
+- [X] ~~*[BUILD_ENDTOEND_GWBC-BDI_D3_FLOW [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/BUILD_ENDTOEND_GWBC-BDI_D3_FLOW/)*~~ [2019-05-14]
+- [X] [BUILD_ENDTOEND_GWBC-BDI_FLOW [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/BUILD_ENDTOEND_GWBC-BDI_FLOW/)
+- [ ] Look at the ping in the most recent build in [TEST_Integration [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TEST_Integration/)
+  > 16 fail in TestNonPROD
+  > 1 Maven Error
     
-- [x] [TEST_SERVICES_JMeter [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TEST_SERVICES_JMeter/)
-> BIA (31) and BSA (1)
+- [X] [TEST_SERVICES_JMeter [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TEST_SERVICES_JMeter/)
 - [ ] [TESTS_ALL_GWBC_FLOW [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TESTS_ALL_GWBC_FLOW/)
-> **8 fails**
->  - 1276-GenerateOutgoingChequeRefunds_Flow_D1
->  - 1276-GenerateOutgoingChequeRefunds_Flow_D2
->  - **558-SalesAgentRegisteringCC**
->  - 1276-GenerateOutgoingChequeRefunds_Flow_D3
->  -  83742-CommissionPayment_CL 
->  - Test langue adler
-- [x] [TESTS_billing-BP-Clock [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TESTS_billing-BP-Clock/)
-- [x] [TESTS_billing-delinquency_part1 [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TESTS_billing-delinquency_part1/)
-- [x] [TESTS_billing-delinquency_part2 [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TESTS_billing-delinquency_part2/)
-- [x] [TESTS_Billing-statement [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TESTS_Billing-statement/)
+  > **5 fails**
+  >  - 1276-GenerateOutgoingChequeRefunds_Flow_D1 **Pass**
+        - 
+  >  - 1276-GenerateOutgoingChequeRefunds_Flow_D2 **Pass**
+  >  - 1276-GenerateOutgoingChequeRefunds_Flow_D3 **Pass**
+  >  - 83742-CommissionPayment_CL **Gab**
+  >  - testChangePaymentInfoIQC_NIL_QC_EN **fail**
+  >     - Next payment due date doesn't match
+- [ ] [TESTS_billing-BP-Clock [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TESTS_billing-BP-Clock/)
+  > **2 fails**
+  > -  testReAssignDelinquencyBEL_BEL_AB_EN_CLOCK **Fail** - May have done something wrong, have to check with fred
+  > -  testReAssignDelinquencyBEL_BNA_ON_EN_CLOCK **Fail** - May have done something wrong, have to check with fred
+- [X] [TESTS_billing-delinquency_part1 [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TESTS_billing-delinquency_part1/)
+- [ ] [TESTS_billing-delinquency_part2 [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TESTS_billing-delinquency_part2/)
+  > **1 fail**
+  > -  1621-NonRsesponsiveDelinquency_TestCase7_CL **Pass**
+- [X] [TESTS_Billing-statement [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TESTS_Billing-statement/)
 > Still running
-- [x] [TESTS_WORKFLOW [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TESTS_WORKFLOW/)
+- [X] [TESTS_WORKFLOW [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TESTS_WORKFLOW/)
+
+---
+
 ## How to fill Testsuit follow-up
 - Test Suite
   - Name of the suite in Jenkins
