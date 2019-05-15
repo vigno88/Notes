@@ -11,43 +11,41 @@
 - To see the result of the test int the ITA gui, click on **Results URL**
 - Do not note in the suite follow up anything related to **Nouvelle Affaire**
 - Doc [ITA](https://apps.iad.ca.inet/sites/adsth/ITA/default.aspx )
+  
 ## Tasks to do in the morning
+
 [3.Scheduled Tests [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/)
 
 Always verify if the fail already happened in the past
 BDI in priority since other test depends of them later in the day
 
 - [ ] [BUILD_ENDTOEND_GWBC-BDI_D1_FLOW [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/BUILD_ENDTOEND_GWBC-BDI_D1_FLOW/)
-  > 2 fails
-  > - 178-EndToEndBelairQCRes1NewBusiness_BDI_D1 **Pass**
-  > - 178-EndToEndBelairONRes1NewBusiness_BDI_D1 **Pass**
-- [X] ~~*[BUILD_ENDTOEND_GWBC-BDI_D2_FLOW [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/BUILD_ENDTOEND_GWBC-BDI_D2_FLOW/)*~~ [2019-05-14]
-- [X] ~~*[BUILD_ENDTOEND_GWBC-BDI_D3_FLOW [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/BUILD_ENDTOEND_GWBC-BDI_D3_FLOW/)*~~ [2019-05-14]
+  > <span style="color:red">NO Success, everything failed<span>
+- [X] [BUILD_ENDTOEND_GWBC-BDI_D2_FLOW [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/BUILD_ENDTOEND_GWBC-BDI_D2_FLOW/)
+- [ ] [BUILD_ENDTOEND_GWBC-BDI_D3_FLOW [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/BUILD_ENDTOEND_GWBC-BDI_D3_FLOW/)
+  > <span style="color:red">NO Success, everything failed<span>
 - [X] [BUILD_ENDTOEND_GWBC-BDI_FLOW [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/BUILD_ENDTOEND_GWBC-BDI_FLOW/)
-- [ ] Look at the ping in the most recent build in [TEST_Integration [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TEST_Integration/)
+- [x] Look at the ping in the most recent build in [TEST_Integration [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TEST_Integration/)
   > 16 fail in TestNonPROD
   > 1 Maven Error
 - [X] [TEST_SERVICES_JMeter [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TEST_SERVICES_JMeter/)
 - [ ] [TESTS_ALL_GWBC_FLOW [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TESTS_ALL_GWBC_FLOW/)
-  > **5 fails**
-  >  - 1276-GenerateOutgoingChequeRefunds_Flow_D1 **Pass**
-        - 
-  >  - 1276-GenerateOutgoingChequeRefunds_Flow_D2 **Pass**
-  >  - 1276-GenerateOutgoingChequeRefunds_Flow_D3 **Pass**
-  >  - 83742-CommissionPayment_CL **Gab**
-  >  - testChangePaymentInfoIQC_NIL_QC_EN **fail**
-  >     - Next payment due date doesn't match
+  > <span style="color:red">36 fails<span>
+  > - 1008-SearchActivities - <span style="color:green"> Launched & SUCCESS<span>
+  > - 603-DesktopActivities - <span style="color:green"> Launched & SUCCESSS<span>
+  > - 83742-CommissionPayment_CL  **as usual**
+  > - 22-ManageAccountRefundsAuto_CL - <span style="color:green"> Launched & SUCCESS<span>
+  > - Billing_BP_P1 **31 fails** - Normal (demander antoine pour resoudre le probleme)
+  > - testVoidRefundIQC_NIL_QC_FR_SEQ2 <span style="color:red"> (IE) <span>  
 - [ ] [TESTS_billing-BP-Clock [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TESTS_billing-BP-Clock/)
-  > **2 fails**
-  > -  testReAssignDelinquencyBEL_BEL_AB_EN_CLOCK **Fail** - May have done something wrong, have to check with fred
-  > -  testReAssignDelinquencyBEL_BNA_ON_EN_CLOCK **Fail** - May have done something wrong, have to check with fred
+  > <span style="color:red">1 missing<span> ->  testExternalCollectionsIQC_NIL_QC_FR_CLOCK 
 - [X] [TESTS_billing-delinquency_part1 [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TESTS_billing-delinquency_part1/)
-- [ ] [TESTS_billing-delinquency_part2 [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TESTS_billing-delinquency_part2/)
-  > **1 fail**
-  > -  1621-NonRsesponsiveDelinquency_TestCase7_CL **Pass**
+- [X] [TESTS_billing-delinquency_part2 [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TESTS_billing-delinquency_part2/)
+  > 
 - [X] [TESTS_Billing-statement [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TESTS_Billing-statement/)
-> Still running
-- [X] [TESTS_WORKFLOW [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TESTS_WORKFLOW/)
+- [ ] [TESTS_WORKFLOW [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TESTS_WORKFLOW/)
+  > <span style="color:red">1 fail<span>
+  > - WorkflowEFTRefund_Master_CL <span style="color:green">Launched & Success<span>
 
 ---
 
