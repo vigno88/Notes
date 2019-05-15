@@ -27,7 +27,6 @@ BDI in priority since other test depends of them later in the day
 - [ ] Look at the ping in the most recent build in [TEST_Integration [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TEST_Integration/)
   > 16 fail in TestNonPROD
   > 1 Maven Error
-    
 - [X] [TEST_SERVICES_JMeter [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TEST_SERVICES_JMeter/)
 - [ ] [TESTS_ALL_GWBC_FLOW [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TESTS_ALL_GWBC_FLOW/)
   > **5 fails**
@@ -53,6 +52,7 @@ BDI in priority since other test depends of them later in the day
 ---
 
 ## How to fill Testsuit follow-up
+
 - Test Suite
   - Name of the suite in Jenkins
 - Test failing

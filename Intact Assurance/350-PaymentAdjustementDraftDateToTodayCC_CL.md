@@ -1,11 +1,10 @@
-### 350-PaymentAdjustementDraftDateToTodayCC_CL
+# 350-PaymentAdjustementDraftDateToTodayCC_CL
 
 account : TEST_EN_US
           TEST_EN_US3
           TEST_EN_US
           TEST_EN_US
-          
-          
+
 1000000196 pass
 1000000198 pass
 1000000200 pass
