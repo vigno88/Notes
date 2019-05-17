@@ -2,7 +2,7 @@
 
 ## General Info
 
- - [Jenkins Url](https://stha38e56:444/view/Billing/)
+- [Jenkins Url](https://stha38e56:444/view/Billing/)
 
   - Once in the flow, we can see a list of build
     - BUILD_ENDTOEND_GWBC-BDI = gobrio (old system that we want to replace by Guidewire)
@@ -19,33 +19,36 @@
 Always verify if the fail already happened in the past
 BDI in priority since other test depends of them later in the day
 
-- [ ] [BUILD_ENDTOEND_GWBC-BDI_D1_FLOW [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/BUILD_ENDTOEND_GWBC-BDI_D1_FLOW/)
-  > <span style="color:red">NO Success, everything failed<span>
-- [X] [BUILD_ENDTOEND_GWBC-BDI_D2_FLOW [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/BUILD_ENDTOEND_GWBC-BDI_D2_FLOW/)
-- [ ] [BUILD_ENDTOEND_GWBC-BDI_D3_FLOW [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/BUILD_ENDTOEND_GWBC-BDI_D3_FLOW/)
-  > <span style="color:red">NO Success, everything failed<span>
-- [X] [BUILD_ENDTOEND_GWBC-BDI_FLOW [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/BUILD_ENDTOEND_GWBC-BDI_FLOW/)
-- [x] Look at the ping in the most recent build in [TEST_Integration [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TEST_Integration/)
-  > 16 fail in TestNonPROD
-  > 1 Maven Error
-- [X] [TEST_SERVICES_JMeter [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TEST_SERVICES_JMeter/)
+- [x] [BUILD_ENDTOEND_GWBC-BDI_D1_FLOW [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/BUILD_ENDTOEND_GWBC-BDI_D1_FLOW/)
+  > <span style="color:green">Didn't run today<span>
+- [x] [BUILD_ENDTOEND_GWBC-BDI_D2_FLOW [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/BUILD_ENDTOEND_GWBC-BDI_D2_FLOW/)
+  > <span style="color:green">Didn't run today<span>
+- [x] [BUILD_ENDTOEND_GWBC-BDI_D3_FLOW [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/BUILD_ENDTOEND_GWBC-BDI_D3_FLOW/)
+- [x] [BUILD_ENDTOEND_GWBC-BDI_FLOW [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/BUILD_ENDTOEND_GWBC-BDI_FLOW/)
+  > > <span style="color:green">Will run at 8AM<span>
+- [ ] Look at the ping in the most recent build in [TEST_Integration [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TEST_Integration/)
+  > <span style="color:red"> contactbilling-integration-tests - **69 fails**</span>
+  > - 69 failures in TestNonPROD
+  > - No report for TestPingAllGWBC
+- [ ] [TEST_SERVICES_JMeter [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TEST_SERVICES_JMeter/)
+  > <span style="color:red">Still running <span>
+  > used to run in 20 min, as been running for at least 3h
 - [ ] [TESTS_ALL_GWBC_FLOW [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TESTS_ALL_GWBC_FLOW/)
-  > <span style="color:red">36 fails<span>
-  > - 1008-SearchActivities - <span style="color:green"> Launched & SUCCESS<span>
-  > - 603-DesktopActivities - <span style="color:green"> Launched & SUCCESSS<span>
+  > <span style="color:red">65 fails<span>
+  > -  89817-ChequeAutoCommPayment_CL - <span style="color:red">Failed<span>
+  >     - Have to talk to max
   > - 83742-CommissionPayment_CL  **as usual**
-  > - 22-ManageAccountRefundsAuto_CL - <span style="color:green"> Launched & SUCCESS<span>
-  > - Billing_BP_P1 **31 fails** - Normal (demander antoine pour resoudre le probleme)
-  > - testVoidRefundIQC_NIL_QC_FR_SEQ2 <span style="color:red"> (IE) <span>  
+  > - 355-TransactionHistoryPolicyChangeCreditDistributionWithNSFNoRefund_CL - <span style="color:green">Pass<span> 
+  > - 355-TransactionHistoryCancellationCreditDistribution_CL <span style="color:green">Pass<span>
+  > - 355-TransactionHistoryPaymentReversalNoFee_CL - <span style="color:green">Pass<span>
+  > - **58 fails due to appId: company** <span style="color:red">Fail<span>     
 - [ ] [TESTS_billing-BP-Clock [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TESTS_billing-BP-Clock/)
-  > <span style="color:red">1 missing<span> ->  testExternalCollectionsIQC_NIL_QC_FR_CLOCK 
-- [X] [TESTS_billing-delinquency_part1 [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TESTS_billing-delinquency_part1/)
-- [X] [TESTS_billing-delinquency_part2 [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TESTS_billing-delinquency_part2/)
-  > 
-- [X] [TESTS_Billing-statement [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TESTS_Billing-statement/)
-- [ ] [TESTS_WORKFLOW [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TESTS_WORKFLOW/)
-  > <span style="color:red">1 fail<span>
-  > - WorkflowEFTRefund_Master_CL <span style="color:green">Launched & Success<span>
+    > - **7 fails due to appId: company** <span style="color:red">Fail<span>  
+- [x] [TESTS_billing-delinquency_part1 [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TESTS_billing-delinquency_part1/)
+- [x] [TESTS_billing-delinquency_part2 [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TESTS_billing-delinquency_part2/)
+
+- [x] [TESTS_Billing-statement [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TESTS_Billing-statement/) getDate script - 1133 et daily batch
+- [x] [TESTS_WORKFLOW [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TESTS_WORKFLOW/)
 
 ---
 
