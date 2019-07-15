@@ -41,3 +41,4 @@ This application is used to easily deploy Guidewire environment. Each user has i
 > **SME-TR​N environments**: These environments are dedicated to Super Users so they can prepare for training sessions
 
 > **Sandbox environments**: This environment contains the 'Out of the Box' version of Guidewire Billing Center for references
+
