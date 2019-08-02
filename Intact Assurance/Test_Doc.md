@@ -215,3 +215,5 @@ VALIDATE_BILLING_STATEMENT_RECORD
     <bil:generateBillingStatementInfo>
       <!--Optional:-->
       <bil:billingStatementReferenceNumber>GWBC2</bil:billingStatementReferenceNumber><!--Optional:--><bil:contractReferenceNumber></bil:contractReferenceNumber><!--Optional:--><bil:requestor></bil:requestor><!--Optional:--><bil:policyNumber>B00-0003</bil:policyNumber></bil:generateBillingStatementInfo></soapenv:Body></soapenv:Envelope>
+
+      https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TESTS_ALL_GWBC_FLOW/389/TESTS_5fALL_5fGWBC_5fFLOW-389_5fHTML-Report/
