@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Url Parser</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css">
+  <link rel="stylesheet" href="custom.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <script src="script.js"></script>
+</head>
+
+<body >
+  <div class="container is-fluid" style="padding-bottom: 15px;">
+      <h1 class="title has-text-primary">Follow-up V3</h1>
+      <div class="field">
+        <label class="label">Please copy the url of the ITA flow report</label>
+            <div class="control ">
+                <input class="input" id="url" type="text" placeholder="Url of the report" name="url" style="width: 75%;">
+                <button onclick="sendUrl()" id="submit" class="button is-primary">
+                  <span class="icon is-small"><i class="fas fa-check"></i></span>&nbsp;&nbsp;Submit</button>
+            </div>
+      </div>
+  </div>
+  <div class="container is-fluid">
+    <div class="field is-grouped">
+    <p class="title is-4">Report to fill-up</p>&nbsp;
+    <button type="submit" class="button is-primary" value="Submit" onclick="refreshReport()">
+      <span class="icon is-small"><i class="fas fa-sync"></i></span>&nbsp;&nbsp;Refresh
+    </button>
+  </div>
+    <section style="height: 35vh;overflow-y: auto;" id="upperScreen">
+    </section>
+  </div>
+  <div class="container is-fluid" style="padding-top: 15px;padding-bottom: 15px">
+    <div class="field is-grouped">
+      <p class="control">
+        <input class="input" type="text" placeholder="Contains" id="placeHolder">
+      </p>
+      <p class="control">
+        <span class="select">
+          <select id="filter">
+            <option>Filter by</option>
+            <option>Test Suite</option>
+            <option>Test failling</option>
+            <option>Branch</option>
+            <option>Date</option>
+            <option>Environment</option>
+            <option>Report Url</option>
+            <option>Host</option>
+            <option>ScreenDef</option>
+            <option>Error</option>
+            <option>Details</option>
+            <option>Action taken</option>
+          </select>
+        </span>
+      </p>
+      <p class="control">
+        <a class="button is-primary" onclick="reportQuery(displayQuery)">
+          <span class="icon is-small"><i class="fas fa-search"></i></span>&nbsp;&nbsp;Search
+        </a>
+      </p>
+    </div>
+  </div>
+  <div class="container is-fluid">
+    <section style="height: 36vh;overflow-y: auto;">
+        <table class="table">
+            <thead>
+              <tr>
+                <th>Test&nbsp;Suite</th>
+                <th>Test&nbsp;failling</th>
+                <th>Branch</th>
+                <th>Date&emsp;&emsp;</th>
+                <th>Environment</th>
+                <th>Rerun</th>
+                <th>Same&nbsp;error</th>
+                <th>Report</th>
+                <th>Execution&nbsp;Host</th>
+                <th>ScreenDef</th>
+                <th>Test&nbsp;Fails&nbsp;since</th>
+                <th>Error</th>
+                <th>Details&emsp;&emsp;&emsp;&emsp;</th>
+                <th style="width: 100px">Pass&nbsp;with&nbsp;relaunch</th>
+                <th>Defect#/Action&nbsp;taken</th>
+              </tr>
+            </thead>
+            <tbody id="lowerScreen">
+
+            </tbody>
+          </table>
+    </section>
+  </div>
+  <div class="modal" id="noRecordModal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <div class="box" style="text-align: center;">No records found&nbsp;&nbsp;<i class="fas fa-times"></i> </div>
+    </div>
+    <button class="modal-close is-large" aria-label="close" onclick="closeModal()"></button>
+  </div>
+</body>
+
+</html>

@@ -31,46 +31,27 @@ BDI in priority since other test depends of them later in the day
 >         password :dadev999
 
 - [x] [BUILD_ENDTOEND_GWBC-GW_D1_FLOW](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/BUILD_ENDTOEND_GWBC-GW_D1_FLOW/)
-  > passer
 - [x] [BUILD_ENDTOEND_GWBC-GW_D2_FLOW](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/BUILD_ENDTOEND_GWBC-GW_D2_FLOW/)
 - [x] [BUILD_ENDTOEND_GWBC-GW_D3_FLOW](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/BUILD_ENDTOEND_GWBC-GW_D3_FLOW/)
 - [x] [BUILD_ENDTOEND_GWBC-BDI_D1_FLOW [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/BUILD_ENDTOEND_GWBC-BDI_D1_FLOW/)
 - [x] [BUILD_ENDTOEND_GWBC-BDI_D2_FLOW [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/BUILD_ENDTOEND_GWBC-BDI_D2_FLOW/)
-- [x] [BUILD_ENDTOEND_GWBC-BDI_D3_FLOW [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/BUILD_ENDTOEND_GWBC-BDI_D3_FLOW/)
+- [ ] [BUILD_ENDTOEND_GWBC-BDI_D3_FLOW [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/BUILD_ENDTOEND_GWBC-BDI_D3_FLOW/)
 - [x] [BUILD_ENDTOEND_GWBC-BDI_FLOW [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/BUILD_ENDTOEND_GWBC-BDI_FLOW/)
-- [ ] Look at the ping in the most recent build in [TEST_Integration [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TEST_Integration/)
-  > encore beaucoup de BIA et  BAA 
+- [x] Look at the ping in the most recent build in [TEST_Integration [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TEST_Integration/)
 - [x] [TEST_SERVICES_JMeter [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TEST_SERVICES_JMeter/)
-  > BPTP_90098_TestProcessPolicy - Success:0, Fail:1 (Nicolas ma dit normal)
-- [x] [TESTS_ALL_GWBC_FLOW [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TESTS_ALL_GWBC_FLOW/)
-  > 674-ProcessIncomingBankPaymentsFile
-  > 107-CreateHistoryEventManualPaymentRequestandCancellation_Flow_D2
 
-  > testCreateMultiplePaymentEntryBEL_BNA_ON_EN
+- [ ] [TESTS_ALL_GWBC_FLOW [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TESTS_ALL_GWBC_FLOW/)
+    > 1276, les rapport semble avoir rappetisser, le screendef a trop de column donc null pointer exception
 
-  *withdrawal day*
-  testPostdatedPaymentRemoveBEL_BEL_AB_EN
-  testPostdatedPaymentRemoveBEL_BNA_ON_EN
-  testApplySuspensePaymentBEL_BEL_AB_EN
-  testApplySuspensePaymentBEL_BNA_ON_EN 
-  testMoveSuspensePaymentBEL_BEL_AB_EN 
-  testMoveSuspensePaymentBEL_BNA_ON_EN 
-  testDistributeUnappliedFundsBEL_BEL_AB_EN 
-   testDistributeUnappliedFundsBEL_BNA_ON_EN
+    testReAssignDelinquencyBEL_BEL
+- [ ] [TESTS_billing-BP-Clock [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TESTS_billing-BP-Clock/)
 
-    *Defect*
-   testChangePaymentInfoIQC_NIL_QC_EN 
-
-
-- [x] [TESTS_billing-BP-Clock [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TESTS_billing-BP-Clock/)
-  >  fail BP assert field withdrawalDay 
 - [x] [TESTS_billing-delinquency_part1 [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TESTS_billing-delinquency_part1/)
 - [x] [TESTS_billing-delinquency_part2 [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TESTS_billing-delinquency_part2/)
-  >  1621-NonResponsiveDelinquency_TestCase7_CL (meme qu'hier)
+  >  1621-DelinquencyCancellationRenewalNonResponsive_CL, pass
 - [x] [TESTS_Billing-statement [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TESTS_Billing-statement/)
-  > Daily batch on fail donc "normal" que D4 fail (pas de rapport pour les batch)
+ > fail a ete relaunch
 - [x] [TESTS_WORKFLOW [Jenkins]](https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TESTS_WORKFLOW/)
-    > magnifique
 ---
 
 ## How to fill Testsuit follow-up
@@ -107,21 +88,130 @@ To check next time :
 
 ## Task
 
-
-- [x] sans proxy chrome
-- [X] sans proxy ie
-- [x] 1 start-end chrome
-- [x] 1 start-end ie
-- [x] 2 start-end chrome
-- [x] 2 start-end ie
-- [x] 1 per-keyword chrome
-- [x] 1 per-keyword ie
-- [x] 2 per-keyword chrome
-- [x] 2 per-keyword ie
-- [x] on error ie
-- [x] on error chrome
+LOAD_BILLING_STATEMENT_OUTPUT_FILE
+SELECT_BILLING_STATEMENT_POLICY_PERIOD
+VALIDATE_BILLING_STATEMENT_RECORD
 
 
-https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TESTS_ALL_GWBC_FLOW/373/TESTS_5fALL_5fGWBC_5fFLOW-373_5fHTML-Report/
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://guidewire.com/ws/soapheaders" xmlns:bil="http://guidewire.com/bc/ws/ifc/webservice/document/bc801/BillingDocumentAPI">  
+<soapenv:Header>
+      <soap:authentication>
+         <soap:username>su</soap:username>
+         <soap:password>gw</soap:password>
+      </soap:authentication>
+   </soapenv:Header>
+   <soapenv:Body>
+      <bil:generateBillingStatementInfo>
+         <!--Optional:-->
+         <bil:billingStatementReferenceNumber>[parameter1]</bil:billingStatementReferenceNumber>
+         <!--Optional:-->
+         <bil:contractReferenceNumber></bil:contractReferenceNumber>
+         <!--Optional:-->
+         <bil:requestor></bil:requestor>
+         <!--Optional:-->
+         <bil:policyNumber>[parameter2]</bil:policyNumber>
+      </bil:generateBillingStatementInfo>
+   </soapenv:Body>
+</soapenv:Envelope>
 
-https://stha38e56:444/view/Billing/view/3.Scheduled%20Tests/job/TESTS_ALL_GWBC_FLOW/353/TESTS_5fALL_5fGWBC_5fFLOW-353_5fHTML-Report/ItaFlowReport.html
+<?xml version="1.0"?>
+<tns:Envelope xmlns:tns="http://schemas.xmlsoap.org/soap/envelope/">
+  <tns:Body>
+    <generateBillingStatementInfoResponse xmlns="http://guidewire.com/bc/ws/ifc/webservice/document/bc801/BillingDocumentAPI">
+      <return xmlns:pogo="http://guidewire.com/bc/ws/ifc/webservice/document/bc801/BCBillingStatementInfo_IFC">
+        <pogo:AccountNumber>1000000016</pogo:AccountNumber>
+        <pogo:AccountPreviousTotalBalance>0</pogo:AccountPreviousTotalBalance>
+        <DefaultPaymentInstrument xmlns="http://guidewire.com/bc/ws/ifc/webservice/document/bc801/BCBillingStatementInfo_IFC" xmlns:pogo="http://guidewire.com/bc/ws/ifc/webservice/document/bc801/BCPaymentInstrument_IFC">
+          <pogo:CreditCardAccountNumber>nullXXXXXXXXnull</pogo:CreditCardAccountNumber>
+          <pogo:MaskedFinancialInstAccountNumber>XXXX927</pogo:MaskedFinancialInstAccountNumber>
+          <pogo:PaymentMethod>ach</pogo:PaymentMethod>
+        </DefaultPaymentInstrument>
+        <pogo:InsufficientFundsFees>0</pogo:InsufficientFundsFees>
+        <pogo:PaymentDueAmount>171.74</pogo:PaymentDueAmount>
+        <pogo:PaymentDueDate>2019-07-24T00:00:00-04:00</pogo:PaymentDueDate>
+        <pogo:PaymentPlan>mo</pogo:PaymentPlan>
+        <pogo:PolicyReinstatefees>0.00</pogo:PolicyReinstatefees>
+        <pogo:PolicyUnapplied>0.00</pogo:PolicyUnapplied>
+        <pogo:RemainingBalance>2060.00</pogo:RemainingBalance>
+        <pogo:RemainingInstallmentsCount>12</pogo:RemainingInstallmentsCount>
+        <pogo:StatementInsufficientFundsCharges>0</pogo:StatementInsufficientFundsCharges>
+        <pogo:StatementTaxAmount>0</pogo:StatementTaxAmount>
+        <pogo:TotalBankFees>0</pogo:TotalBankFees>
+        <pogo:TotalFinancialFees>60.00</pogo:TotalFinancialFees>
+        <pogo:TotalPostDatedChequeAmount>0</pogo:TotalPostDatedChequeAmount>
+        <pogo:TransactionsList>
+          <Entry xmlns="http://guidewire.com/bc/ws/ifc/webservice/document/bc801/BCBillingStatementInfo_IFC" xmlns:pogo="http://guidewire.com/bc/ws/ifc/webservice/document/bc801/BCBillingStatementTransaction_IFC">
+            <pogo:Code>NBS</pogo:Code>
+            <pogo:EffectiveDate>2019-07-22T00:00:00-04:00</pogo:EffectiveDate>
+            <pogo:FeesAmount>60.00</pogo:FeesAmount>
+            <pogo:PremiumAmount>2000.00</pogo:PremiumAmount>
+            <pogo:PrincipalTransactionIndicator>Y</pogo:PrincipalTransactionIndicator>
+            <pogo:TotalAmount>2060.00</pogo:TotalAmount>
+          </Entry>
+          <Entry xmlns="http://guidewire.com/bc/ws/ifc/webservice/document/bc801/BCBillingStatementInfo_IFC" xmlns:pogo="http://guidewire.com/bc/ws/ifc/webservice/document/bc801/BCBillingStatementTransaction_IFC">
+            <pogo:Code>NBS</pogo:Code>
+            <pogo:EffectiveDate>2019-07-22T00:00:00-04:00</pogo:EffectiveDate>
+            <pogo:FeesAmount>60.00</pogo:FeesAmount>
+            <pogo:PremiumAmount>2000.00</pogo:PremiumAmount>
+            <pogo:PrincipalTransactionIndicator>Y</pogo:PrincipalTransactionIndicator>
+            <pogo:TotalAmount>2060.00</pogo:TotalAmount>
+          </Entry>
+          <Entry xmlns="http://guidewire.com/bc/ws/ifc/webservice/document/bc801/BCBillingStatementInfo_IFC" xmlns:pogo="http://guidewire.com/bc/ws/ifc/webservice/document/bc801/BCBillingStatementTransaction_IFC">
+            <pogo:Code>NBS</pogo:Code>
+            <pogo:EffectiveDate>2019-07-22T00:00:00-04:00</pogo:EffectiveDate>
+            <pogo:FeesAmount>60.00</pogo:FeesAmount>
+            <pogo:PremiumAmount>2000.00</pogo:PremiumAmount>
+            <pogo:PrincipalTransactionIndicator>Y</pogo:PrincipalTransactionIndicator>
+            <pogo:TotalAmount>2060.00</pogo:TotalAmount>
+          </Entry>
+          <Entry xmlns="http://guidewire.com/bc/ws/ifc/webservice/document/bc801/BCBillingStatementInfo_IFC" xmlns:pogo="http://guidewire.com/bc/ws/ifc/webservice/document/bc801/BCBillingStatementTransaction_IFC">
+            <pogo:Code>NBS</pogo:Code>
+            <pogo:EffectiveDate>2019-07-22T00:00:00-04:00</pogo:EffectiveDate>
+            <pogo:FeesAmount>60.00</pogo:FeesAmount>
+            <pogo:PremiumAmount>2000.00</pogo:PremiumAmount>
+            <pogo:PrincipalTransactionIndicator>Y</pogo:PrincipalTransactionIndicator>
+            <pogo:TotalAmount>2060.00</pogo:TotalAmount>
+          </Entry>
+
+        </pogo:TransactionsList>
+      </return>
+    </generateBillingStatementInfoResponse>
+  </tns:Body>
+</tns:Envelope>
+
+
+
+
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:soap="http://guidewire.com/ws/soapheaders" xmlns:bil="http://guidewire.com/bc/ws/ifc/webservice/document/bc801/BillingDocumentAPI">  
+<soapenv:Header>
+      <soap:authentication>
+         <soap:username>su</soap:username>
+         <soap:password>gw</soap:password>
+      </soap:authentication>
+   </soapenv:Header>
+   <soapenv:Body>
+      <bil:generateBillingStatementInfo>
+         <!--Optional:-->
+         <bil:billingStatementReferenceNumber>[parameter1]</bil:billingStatementReferenceNumber>
+         <!--Optional:-->
+         <bil:contractReferenceNumber></bil:contractReferenceNumber>
+         <!--Optional:-->
+         <bil:requestor></bil:requestor>
+         <!--Optional:-->
+         <bil:policyNumber>[parameter2]</bil:policyNumber>
+      </bil:generateBillingStatementInfo>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope" xmlns:soap="http://guidewire.com/ws/soapheaders" xmlns:bil="http://guidewire.com/bc/ws/ifc/webservice/document/bc801/BillingDocumentAPI">
+  <soapenv:Header>
+    <soap:authentication>
+      <soap:username>su</soap:username>
+      <soap:password>gw</soap:password>
+    </soap:authentication>
+  </soapenv:Header>
+  <soapenv:Body>
+    <bil:generateBillingStatementInfo>
+      <!--Optional:-->
+      <bil:billingStatementReferenceNumber>GWBC2</bil:billingStatementReferenceNumber><!--Optional:--><bil:contractReferenceNumber></bil:contractReferenceNumber><!--Optional:--><bil:requestor></bil:requestor><!--Optional:--><bil:policyNumber>B00-0003</bil:policyNumber></bil:generateBillingStatementInfo></soapenv:Body></soapenv:Envelope>
